@@ -11,7 +11,8 @@ import MapKit
 struct UberMapViewRepresentable: UIViewRepresentable{
     
     let mapView = MKMapView()
-    let locationManager = LocationManager()
+    let locationManager = LocationManager.shared
+    @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
     func makeUIView(context: Context) -> some UIView {
@@ -23,9 +24,23 @@ struct UberMapViewRepresentable: UIViewRepresentable{
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let coordinate = locationViewModel.selectedLocationCoordinate {
-            context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
-            context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+        print("DEGUB: map state is \(mapState)")
+        
+        switch mapState {
+        case .noInput:
+            context.coordinator.clearMapViewAndRecenterOnUserLocation()
+            break
+        case .searchingForLocation:
+            break
+        case .locationSelected :
+            if let coordinate = locationViewModel.selectedUberLocation?.coordinate {
+                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+                context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+            }
+            break
+        case .polylineAdded:
+            break
+            
         }
     }
     
@@ -41,6 +56,7 @@ extension UberMapViewRepresentable {
         
         let parent: UberMapViewRepresentable
         var userLocationCoordinate: CLLocationCoordinate2D?
+        var currentRegion: MKCoordinateRegion?
         
         // MARK: - Lifecycle
         
@@ -56,7 +72,7 @@ extension UberMapViewRepresentable {
             let region = MKCoordinateRegion(
                 center: CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude),
                 span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-            
+            self.currentRegion = region
             parent.mapView.setRegion(region, animated: true)
         }
         
@@ -76,33 +92,28 @@ extension UberMapViewRepresentable {
             self.parent.mapView.addAnnotation(anno)
             self.parent.mapView.selectAnnotation(anno, animated: true)
             
-            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true) //Esse codigo vai dar um aumentar a tela para mostrar onde voce esta e onde vc quer ir
+//            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true) //Esse codigo vai dar um aumentar a tela para mostrar onde voce esta e onde vc quer ir
         }
         
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D){
             guard let userLocationCoordinate = self.userLocationCoordinate else {return}
-            getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
+            parent.locationViewModel.getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
-                
+                self.parent.mapState = .polylineAdded
+                let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
+                                                               edgePadding: .init(top: 64, left: 32, bottom: 500, right: 32))
+                self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
         
         
-        func getDestinationRoute(from userLocation: CLLocationCoordinate2D, to destination: CLLocationCoordinate2D, completion: @escaping(MKRoute) -> Void){
-            let userPlacemarket = MKPlacemark(coordinate: userLocation)
-            let destPlacemarket = MKPlacemark(coordinate: destination)
-            let request = MKDirections.Request()
-            request.source = MKMapItem(placemark: userPlacemarket)
-            request.destination = MKMapItem(placemark: MKPlacemark(placemark: destPlacemarket))
-            let directions = MKDirections(request: request)
+        
+        func clearMapViewAndRecenterOnUserLocation(){
+            parent.mapView.removeAnnotations(parent.mapView.annotations)
+            parent.mapView.removeOverlays(parent.mapView.overlays)
             
-            directions.calculate { response, error in
-                if let error = error {
-                    print("Debug: \(error.localizedDescription)")
-                    return
-                }
-                guard let route = response?.routes.first else {return}
-                completion(route)
+            if let currentRegion = currentRegion{
+                parent.mapView.setRegion(currentRegion, animated: true)
             }
         }
     }
