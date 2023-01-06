@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* *{
+    margin: 0;
+    padding: 0;
+
+} */
+:root{
+    --corPrincipal: rgb(34, 34, 34);
+    --corSecundaria: rgb(132, 13, 201);
+}
+body{
+    background-color: var(--corPrincipal);
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+li > a{
+    color: white;
+    text-decoration: none;
+}
+
+li > a:hover{
+    color: var(--corSecundaria);
+    transition: 0.2s all;
+}
+
+
+#inscreva-se-btn{
+    border: 2px solid var(--corSecundaria);
+    border-radius: 15px;
+    padding: 10px;
+}
+#inscreva-se-btn:hover{
+    background-color: var(--corSecundaria);
+    color: white;
+    cursor: pointer;
+}
+h1{
+    font-weight: 200;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2{
+    font-size: 56px;
+    line-height: 10px;
+}
+
+span{
+    color: var(--corSecundaria);
+}
+
+p{
+    line-height: 20px;
+    max-width: 500px;
+}
+
+img{
+    width: 600px;
+}
+
+form.site{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+form input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+}
+
+form [type="submit"]{
+    height: 50px;
+    width: 50%;
+    background-color: var(--corSecundaria);
+    color: white;
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 80px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

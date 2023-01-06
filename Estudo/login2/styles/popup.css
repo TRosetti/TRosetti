@@ -1,0 +1,98 @@
+
+
+div.popup-box{
+    position: fixed;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(34, 34, 34, 0.8);
+    transform: scale(1.1);
+}
+div.popup{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.395);
+    background-color: white;
+    width: 500px;
+}
+span.close-popup{
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    line-height: 20px;
+    width: 20px;
+    text-align: center;
+}
+span.close-popup:hover{
+    background-color: rgb(34, 34, 34);
+    color: white;
+    border-radius: 50%;
+}
+
+div.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login input{
+    border: 2px solid rgb(132, 13, 201);
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: medium;
+}
+
+div.login h2{
+    display: inline;
+    font-family: sans-serif;
+}
+
+.login p{
+    display: block;
+    width: 87%;
+    text-align: left;
+    color: red;
+    margin: 0;
+    display: none;
+}
+input#c-senha{
+    display: none;
+}
+
+input#Entrar{
+    width: 90%;
+    background-color:rgb(132, 13, 201);
+    color: white;
+    cursor: pointer;
+}
+
+div.footer {
+    background-color: #252525;
+    margin-top: 30px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+div.footer p {
+    color: white;
+}
+
+input#cadastrar{
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+    cursor: pointer;
+}

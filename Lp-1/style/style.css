@@ -297,24 +297,23 @@ footer .box-content p{
 }
 
 .form{
-    width: 300px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 input[type=email]{
-    width: 100%;
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 10px 0 0 10px ;
     border: none;
     text-align: left;
     font-family: var(--font1);
     font-size: .8em;
 }
 input[type=submit]{
-    position: absolute;
-    padding: 15px 30px;
-    border-radius: 30px;
-    right: -20px;
+   
+    padding: 15px 20px;
+    border-radius: 0 10px 10px 0;
     border: none;
     text-transform: uppercase;
     background-color: var(--color2);

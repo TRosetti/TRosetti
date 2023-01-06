@@ -1,0 +1,1 @@
+var usuario = {nome: 'thiagorosetti1234@gmail.com', senha: 'thiago1234'}

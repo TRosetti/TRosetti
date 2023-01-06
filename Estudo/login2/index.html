@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/popup.css">
+    <script src="js/main.js"></script>
+    <title>Landing Pages</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Marketing</h1>
+            <h1>Criativo</h1>
+        </div>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li id="inscreva-se-btn" onclick="popup()">LOGIN</li>
+
+        </ul>
+    </header>
+    <main>
+        <aside>
+            <h2><span>Increva-se agora</span></h2>
+            <h2>Na Newslatter</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, aliquam esse culpa error unde, nihil explicabo, cupiditate dolorem voluptas nam excepturi minus! Nesciunt veniam necessitatibus deserunt omnis, sapiente iusto voluptas.</p>
+            <form class="site" action="" method="post" id="insert_form">
+                <input type="text" name="text" id="i-text" placeholder="Nome" required>
+                <input type="email" name="email" id="i-email" placeholder="E-mail" required>
+                <input type="submit" value="Enviar > ">
+            </form>
+
+        </aside>
+        <article>
+            <img src="components/images/77d0a7c454e658833800528e748edbe9.png" alt="Melher-Roxa">
+        </article>
+    </main>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="login">
+                <span class="close-popup" onclick="closePopup()">&times;</span>
+                <h2><span>Login</span></h2>
+
+                <input type="text" name="text" id="text" placeholder="Usuário" required>
+                <p id="p-user">Tente Novamente, Usuário não encontrado.</p>
+
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                <p id="p-senha">Senha Incorreta! Tente Novamente.</p>
+
+                <input type="password" name="c-senha" id="c-senha" placeholder="Confirme a Senha" required>
+
+                <input type="button" value="Entrar" id="Entrar" onclick="entrar()" >
+            </div>
+            <div class="footer">
+                <p>Ainda não tem conta?</p>
+                <input type="button" value="Cadastrar" id="cadastrar" onclick="conta()">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Desenvolvido por Thiago Rosetti</p>
+    </footer>
+    <script src="js/teste.js"></script>
+</body>
+</html>
