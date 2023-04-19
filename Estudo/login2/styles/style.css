@@ -87,6 +87,11 @@ form.site{
     width: 70%;
 }
 
+input:focus{ /* Tirar a borda ao clicar em um input*/
+   box-shadow: 0 0 0 0;
+   outline: 0;
+}
+
 form input{
     margin-top: 20px;
     height: 20px;

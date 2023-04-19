@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>CS-GO</title>
+</head>
+<body>
+    <section id="First">
+        <img src="components/logo.png" alt="logo" id="logo">
+        <div class="divisoria"></div>
+
+        <span ><svg width="497" height="497" viewBox="0 0 497 497" fill="none" xmlns="http://www.w3.org/2000/svg" id="icones">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M248.5 497C385.743 497 497 385.743 497 248.5C497 111.257 385.743 0 248.5 0C111.257 0 0 111.257 0 248.5C0 385.743 111.257 497 248.5 497ZM186.429 347.2L381.25 257.585C389.011 254.015 389.011 242.985 381.25 239.415L186.429 149.8C179.804 146.753 172.25 151.593 172.25 158.885V338.115C172.25 345.407 179.804 350.247 186.429 347.2Z" fill="white"/>
+            </svg>
+        </span>
+       
+        <span onclick="conectar()"><svg width="497" height="568" viewBox="0 0 497 568" fill="none" xmlns="http://www.w3.org/2000/svg" id="icones" class="conectar">
+            <path d="M448.852 395.508C476.027 358.473 492.404 314.629 496.166 268.848C499.927 223.066 490.925 177.137 470.159 136.163C449.393 95.1885 417.676 60.7719 378.531 36.7353C339.385 12.6987 294.343 -0.0171437 248.407 1.73411e-05C202.471 0.0171784 157.439 12.7666 118.311 36.8325C79.1838 60.8983 47.4926 95.3386 26.7574 136.328C6.02206 177.318 -2.9458 223.254 0.849714 269.033C4.64523 314.812 21.0556 358.643 48.2582 395.658L108.097 351.683C89.0229 325.729 77.5165 294.996 74.8552 262.897C72.1939 230.798 78.4819 198.59 93.0209 169.849C107.56 141.108 129.781 116.959 157.216 100.085C184.651 83.211 216.226 74.2715 248.435 74.2594C280.644 74.2474 312.226 83.1633 339.673 100.017C367.121 116.871 389.36 141.003 403.92 169.733C418.481 198.463 424.793 230.666 422.156 262.767C419.518 294.868 408.035 325.609 388.98 351.578L448.852 395.508Z" fill="white"/>
+            <path d="M368.335 329.114C383.878 307.062 393.007 281.136 394.709 254.211C396.411 227.286 390.62 200.416 377.977 176.583C365.335 152.75 346.336 132.886 323.089 119.195C299.842 105.505 273.256 98.5231 246.282 99.0253C219.308 99.5275 193.001 107.494 170.28 122.04C147.559 136.586 129.312 157.144 117.566 181.431C105.819 205.718 101.032 232.785 103.735 259.628C106.438 286.471 116.525 312.04 132.878 333.497L175.098 301.322C164.69 287.666 158.27 271.393 156.55 254.309C154.83 237.226 157.877 220 165.352 204.543C172.828 189.086 184.441 176.003 198.901 166.746C213.361 157.488 230.104 152.418 247.27 152.099C264.437 151.779 281.357 156.222 296.152 164.935C310.946 173.648 323.038 186.29 331.084 201.458C339.13 216.626 342.816 233.726 341.732 250.862C340.649 267.997 334.839 284.498 324.947 298.532L368.335 329.114Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M284.515 307C304.002 295.042 317 273.539 317 249C317 211.445 286.555 181 249 181C211.445 181 181 211.445 181 249C181 273.539 193.998 295.042 213.485 307H213V548C213 559.046 221.954 568 233 568H265C276.046 568 285 559.046 285 548V307H284.515Z" fill="white"/>
+            </svg>
+            </span>
+
+        <div class="divisoria"></div>
+
+
+        <span><svg width="497" height="373" viewBox="0 0 497 373" fill="none" xmlns="http://www.w3.org/2000/svg" id="icones">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M124 0C118.477 0 114 4.47715 114 10V83H155V36H342V83H383V10C383 4.47715 378.523 0 373 0H124Z" fill="white"/>
+            <path d="M114 144H123L126 151H111L114 144Z" fill="#D9D9D9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 83C4.47715 83 0 87.4772 0 93V363C0 368.523 4.47716 373 10 373H487C492.523 373 497 368.523 497 363V93C497 87.4772 492.523 83 487 83H10ZM108.002 151C105.24 151 103.002 153.24 103.002 156.002V188.113C103.002 190.283 101.582 192.331 100.124 194.435C97.3119 198.493 94.3544 202.761 101.157 208.518C102.278 209.468 103.818 209.734 105.265 209.479C111.423 208.396 124.966 207.01 127.997 210.059C128.295 210.075 128.58 210.092 128.854 210.11C138.927 221.479 132.219 246.041 126.388 267.391C121.293 286.044 116.868 302.246 124.892 305.052C124.892 305.052 201.368 340.41 195.693 311.596C192.792 296.871 194.699 271.394 197.256 250H265C267.761 250 270 247.761 270 245V213H396C398.761 213 401 210.761 401 208V156C401 153.239 398.761 151 396 151H108.002ZM261 213H202.711C202.41 214.676 200.302 226.576 198.264 242H256C258.761 242 261 239.761 261 237V213Z" fill="white"/>
+            </svg>
+            </span>
+
+
+        <span>
+            <svg width="497" height="424" viewBox="0 0 497 424" fill="none" xmlns="http://www.w3.org/2000/svg" id="icones">
+            <rect y="73" width="497" height="290" fill="white"/>
+            <rect x="28" y="101" width="441" height="234" fill="#E9E9E9"/>
+            <rect x="233" y="363" width="32" height="29" fill="white"/>
+            <rect y="392" width="497" height="32" fill="white"/>
+            <rect x="176" y="15.0229" width="26" height="89" transform="rotate(-35.2966 176 15.0229)" fill="white"/>
+            <rect x="300.429" width="26" height="89" transform="rotate(35.3 300.429 0)" fill="white"/>
+            </svg>
+        </span>
+
+        <span>
+            <svg width="497" height="497" viewBox="0 0 497 497" fill="none" xmlns="http://www.w3.org/2000/svg" id="icones">
+                <path d="M248.5 497C385.743 497 497 385.743 497 248.5C497 111.257 385.743 0 248.5 0C111.257 0 0 111.257 0 248.5C0 385.743 111.257 497 248.5 497Z" fill="white"/>
+                <path d="M249 480C376.578 480 480 376.578 480 249C480 121.422 376.578 18 249 18C121.422 18 18 121.422 18 249C18 376.578 121.422 480 249 480Z" fill="#F0CB47"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M201 249V475.006C192.833 473.28 184.824 471.123 177 468.558V296H50V366.375C29.668 331.978 18 291.851 18 249C18 121.422 121.422 18 249 18C353.278 18 441.417 87.0951 470.134 182H353V455.32C344.927 459.397 336.582 463.015 328 466.138V249H201Z" fill="black"/>
+                <path d="M13.5 235.5L130.811 180L150.626 221.513L18.0009 285L15.5014 267.5L13.5 235.5Z" fill="white"/>
+                <path d="M294.809 148.001L182 201.846L201.815 243.359L314.624 189.514L294.809 148.001Z" fill="white"/>
+                <path d="M128.976 180.945L167.05 260.369L202.081 243.576L164.007 164.152L128.976 180.945Z" fill="white"/>
+                <path d="M376.078 134.29L323.986 210.464L284.098 126.824L376.078 134.29Z" fill="white"/>
+                </svg>
+                
+        </span>
+        
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icones"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </span>
+
+
+        <span>
+            <svg width="497" height="538" viewBox="0 0 497 538" fill="none" xmlns="http://www.w3.org/2000/svg" class="sair">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M169 53.9887C70.746 87.1436 0 180.06 0 289.5C0 426.743 111.257 538 248.5 538C385.743 538 497 426.743 497 289.5C497 180.432 426.734 87.7748 329 54.3286V148.308C377.985 176.297 411 229.043 411 289.5C411 379.246 338.246 452 248.5 452C158.754 452 86 379.246 86 289.5C86 228.632 119.465 175.581 169 147.742V53.9887Z" fill="white"/>
+                <rect x="206" width="85" height="255" fill="white"/>
+                </svg>
+        </span>
+            
+    </section>
+    <section id="Second">
+
+        <article>
+            <aside class="noticia">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>  <h2>Notícias</h2></span>
+                
+                <div class="divisoria"></div>
+
+                <h1>Hello World!</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores culpa libero ipsum. Excepturi harum laboriosam assumenda nobis ut tenetur quaerat recusandae. Ab temporibus, dignissimos quisquam illo nostrum officiis doloribus asperiores.</p>
+            </aside>
+            <aside class="mercado">
+                <h1>Mercado</h1>
+                <div class="divisoria"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, ad soluta, atque quaerat sunt explicabo suscipit similique ex hic ab accusamus eligendi corporis sint? Necessitatibus sint beatae saepe culpa commodi.</p>
+            </aside>
+        </article>
+
+        <aside>
+            <img src="components/agente.webp" alt="agente">
+        </aside>
+      
+    </section>
+    <section id="Third" >
+        <div class="Perfil">
+            <div class="perfil">?
+                <div class="pin"></div>
+            
+            </div>
+            <div class="dados">
+                <h1>T.Rosetti</h1>
+                <div id="medalha"></div>
+            </div>
+        </div>
+
+        
+        <img src="components/xerife.jpeg" alt="patente" id="patente">
+        <p>Exímio Mestre Guardião</p>
+
+        <!-- <div class="Perfil">
+            <aside>
+                <div class="perfil">?
+                    <div class="pin"></div>
+                
+                </div>
+                <img src="components/xerife.jpeg" alt="patente" id="patente">
+                
+            </aside>
+            <aside>
+                <div class="dados">
+                    <h1>T.Rosetti</h1>
+                    <div id="medalha"></div>
+                    <p>Exímio Mestre Guardião</p>
+                </div>
+                     
+                
+            </aside>
+        </div> -->
+<!-- <div class="pontuacao">X</div> -->
+        
+        <div class="divisoria"></div>
+
+
+
+
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4" class="user"></circle></svg></span>
+        
+        <div class="sla"></div>
+        <div class="friends"></div>
+        <!-- msg -->
+        <!-- add amigos -->
+        <!-- amigos -->
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
