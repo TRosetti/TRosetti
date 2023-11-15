@@ -1,0 +1,344 @@
+
+
+/* 
+01. Importar fontes Caveat e Open Sans do Google Fonts, nos pesos 400, 600, 700 e 800 
+VALOR: 0.7 pontos
+*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap');
+
+
+
+/* variáveis da paleta de cores do site */
+:root {
+    --corPrincipal: #4056a1;
+    --corSecundaria: #efe2ba;
+    --corTerciaria: #d79922;
+    --corAlerta: #f13c20;
+    --corClara: #c5cbe3;
+    --corEscura: #333;
+}
+
+/* configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* fonte padrão */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--corSecundaria);
+}
+
+/* 
+02. Criar uma classe CSS chamada "header" para configurar o cabeçalho. Ela deve ter as seguintes configurações::after
+a) margens internas superior e inferior de 50px e laterais de (10% + 2vw), usando a função calc() para as margens laterais
+b) imagem de fundo com gradiente linear, usando as cores var(--corPrincipal) e var(--corEscura)
+c) cor do texto branca
+d) largura de 100%
+VALOR: 1.5 pontos: 0.3 do seletor e 0.3 de cada letra
+*/
+
+.header{
+    padding: 50px calc(10% + 2vw);
+    background: linear-gradient(to bottom,var(--corPrincipal) ,var(--corEscura));
+    color: white;
+    width: 100%;
+}
+
+
+
+/* 
+03. Criar seletor CSS para elementos TD que sejam descendentes de elementos com a classe "header". Eles devem as seguintes configurações:
+a) ter alinhamento vertical centralizado (vertical-align: middle).
+VALOR: 0.6 pontos: 0.3 do seletor e 0.3 da letra a)
+*/
+
+.header td{
+    vertical-align: middle;
+}
+
+/* 
+04. Criar uma classe CSS chamada "logo" para configurar o logotipo. Ela deve ter as seguintes configurações:
+a) largura de 1%
+b) margem direita de 2vw
+VALOR: 0.6 pontos: 0.2 do seletor e 0.2 de cada letra
+*/
+
+.logo{
+    width: 1%;
+    padding-right: 2vw;
+}
+
+/*
+05. Criar um seletor CSS para elementos IMG que sejam descendentes de elementos da classe "header", para configurar a imagem do logotipo. Ela deve ter as seguintes configurações:
+a) largura e altura de 9vw
+b) borda arredondada de 50%
+VALOR: 0.6 pontos: 0.2 do seletor e 0.2 de cada letra
+*/
+
+.header img{
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+}
+
+/* define o tamanho da fonte para elementos B descendentes de elementos da classe "header" */
+.header b {
+    font-size: 4vw;
+}
+
+/* define o tamanho e família da fonte para elementos SMALL descendentes de elementos da classe "header" */
+.header small {
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 
+06. Criar uma classe CSS chamada "tabela" para configurar a tabela de experiências. Ela deve ter as seguintes configurações:
+a) largura de 80%
+b) margem superior e inferior de 0 e margens laterais automáticas
+c) separação entre células de 2vw (border-collapse: separate; e border-spacing: 2vw;)
+VALOR: 0.8 pontos: 0.2 do seletor e 0.2 de cada letra
+*/
+
+.tabela{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 2vw;
+}
+
+
+
+.menu {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.menu a {
+    font-family: "Caveat";
+    display: inline-block;
+    padding: 10px 4vw;
+    font-size: 3vw;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    margin: .7vw;
+}
+
+/* 
+07. Criar um seletor CSS para configurar elementos A que sejam descendentes de elementos da classe "menu", que estejam sob o cursor do mouse, para definir o estilo dos itens de menu quando o mouse passar sobre eles. O seletor deve ter as seguintes configurações:
+a) cor do texto com a variável --corClara
+b) cor de fundo com a variável --corPrincipal
+VALOR: 0.8 pontos: 0.4 do seletor e 0.2 de cada letra
+*/
+
+.menu a:hover{
+    color: var(--corClara);
+    background-color: var(--corPrincipal);
+}
+
+
+.menu a.active {
+    color: white;
+    background-color: var(--corEscura);
+}
+
+.hero h1 {
+    font-size: 4vw;
+    color: var(--corTerciaria);
+}
+
+
+/* 
+08. Criar um seletor CSS para configurar elementos H2 que sejam descendentes de elementos da classe "hero", para definir o estilo do título de nível 2 da "hero section". O seletor deve ter as seguintes configurações:
+a) fonte Caveat
+b) tamanho de fonte de 3vw
+c) cor do texto com a variável --corClara
+d) altura de linha de 3vw
+VALOR: 1.2 pontos: 0.4 do seletor e 0.2 de cada letra
+*/
+
+.hero h2{
+    font-family: 'Caveat', cursive;
+    font-size: 3vw;
+    color: var(--corClara);
+    line-height: 3vw;
+}
+
+.hero h3 {
+    font-size: 2vw;
+    font-family: "Caveat";
+    color: white;
+}
+
+.hero td:first-child {
+    background-color: var(--corEscura);
+    padding: 2vw;
+    border-radius: 20px;
+    border-collapse: separate;
+}
+
+.hero a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--corPrincipal);
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    font-weight: bold;
+}
+
+.hero a:hover {
+    outline: solid 2px var(--corTerciaria);
+    outline-offset: -2px;
+}
+
+.hero img {
+    border-radius: 20px;
+}
+
+.td1 {
+    width: 12vw;
+}
+
+.paginas a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--corEscura);
+}
+
+.paginas {
+    font-size: 2vw;
+}
+
+.experiencias {
+    font-size: 2vw;
+}
+
+.experiencias td:first-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.projetos {
+    font-size: 2vw;
+}
+
+.projetos td:first-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.projetos img {
+    width: 25vw;
+}
+
+progress {
+    height: 4vw;
+}
+
+.formcontato {
+    font-size: 2vw;
+}
+
+/* 
+09. Criar um seletor CSS para configurar elementos INPUT, SELECT e TEXTAREA que sejam descendentes de elementos da classe "formcontato", para definir o estilo dos campos do formulário de contato. O seletor deve ter as seguintes configurações:
+a) tamanho de fonte de 2vw
+b) margem interna de .5vw
+c) borda arredondada de 1vw
+d) margem inferior de 1vw
+e) largura de 40vw
+f) borda sólida de 1px com a cor da variável --corEscura
+VALOR: 2.0 pontos: 0.8 do seletor e 0.2 de cada letra
+*/
+
+.formcontato input, select, textarea{
+    font-size: 2vw;
+    padding: .5vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+    width: 40vw;
+    border: solid 1px var(--corEscura);
+}
+
+
+.formcontato button {
+    font-size: 2vw;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+    background-color: var(--corPrincipal);
+    color: white;
+}
+
+.formcontato hr {
+    margin: 2vw 0;
+}
+
+
+/* 
+10. Criar um seletor para configurar elementos da classe "footer" para definir o estilo do rodapé. O seletor deve ter as seguintes configurações:
+a) margem interna superior e inferior de 30px e laterais de (10% + 2vw), usando a função calc() para as margens laterais
+b) cor do texto com a variável --corEscura
+c) alinhamento de texto centralizado
+d) cor de fundo branca
+e) borda superior sólida de 1px com a cor da variável --corEscura
+VALOR: 1.2 pontos: 0.2 do seletor e 0.2 de cada letra
+*/
+
+.footer{
+    padding: 30px cal(10% + 2vw);
+    color: var(--corEscura);
+    text-align: center;
+    background-color: white;
+    border: solid 1px var(--corEscura)
+}
+
+.footer img {
+    width: 10vw;
+}
+
+.pt1 {
+    padding-top: 10px;
+}
+
+.pt2 {
+    padding-top: 20px;
+}
+
+.pt3 {
+    padding-top: 30px;
+}
+
+.pt4 {
+    padding-top: 40px;
+}
+
+.pt5 {
+    padding-top: 50px;
+}
+
+.p1 {
+    padding: 5px;
+}
+
+.p2 {
+    padding: 10px;
+}
+
+.p3 {
+    padding: 15px;
+}
+
+.p4 {
+    padding: 20px;
+}
+
+.p5 {
+    padding: 25px;
+}

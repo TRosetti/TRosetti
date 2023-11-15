@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Formatação de Colunas</title>
+    <style>
+        .row{
+            height: 200px;
+            background-color: bisque;
+        }
+        .col-3{
+            background-color: aquamarine;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamento Vertiical </h1>
+    <div class="container">
+        <div class="row">
+            <!-- Uma linha(row) tem 12 colunas(col) -->
+            <!-- Essa class em baixo está col-3, então a div vai ter o tamanho de 3 colunas -->
+            <!-- Se escrever só (col) ela vai ver se tem mais divs com colunas na div.row e dividir elas em 12 -->
+            <div class="col-3 align-self-start">Coluna 1</div>
+            <div class="col-3 align-self-center">Coluna 2</div>
+            <div class="col-3 align-self-end">Coluna 3</div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-3">Coluna 1</div>
+            <div class="col-3">Coluna 2</div>
+            <div class="col-3">Coluna 3</div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row align-items-xxl-center">
+            <!-- Como esse tem o breackpoint (xxl) quando chegar em uma certa largura da tela vai mudar o alinhamento pro centro -->
+            <div class="col-3">Coluna 1</div> 
+            <div class="col-3">Coluna 2</div>
+            <div class="col-3">Coluna 3</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Alinhamento Horizontal</h1>
+
+    <div class="container">
+        <div class="row justify-content-evenly ">
+            <div class="col-3 order-last">Coluna 1</div>
+            <!-- order-last manda ele para o ultimo lugar -->
+            <div class="col-3">Coluna 2</div>
+            <div class="col-3">Coluna 3</div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 offset-1">Coluna 1</div>
+             <!-- o offset-n  desloca n colunas para direita -->
+            <div class="col-3">Coluna 2</div>
+            <div class="col-3">Coluna 3</div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

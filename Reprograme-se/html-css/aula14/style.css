@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+}
+
+form {
+    text-align: left;
+    display: inline-block;
+}
+
+form > div{
+    margin: 1em 0;
+}
+
+form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+input + label{
+    display: inline;
+    margin: 0;
+}
+
+fieldset > input[type=radio]:not(:first-of-type){
+    /* O psudp seletor  ':not(:first-of-type)'  serve para falar que o primeiro item do tipo inserido antes, não vai receber esse estilo 
+    
+    Nesse caso ele foi usado para nao ficar desproporcional a margin 
+    */
+
+    margin-left: 20px;
+}
+
+fieldset{
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+input{
+    border-radius: 2px;
+    border: 1px solid gray;
+}
+
+input:focus{
+    background-color: rgb(255, 255, 61); 
+    outline: 3px solid red;
+}
+
+input:required{
+    background-color: lightblue;
+}
+
+
+
+input[type=text]:valid,
+input[type=url]:valid,
+input[type=email]:valid,
+input[type=password]:valid{
+    background:  lightgreen;
+}
+
+input[type=text]:invalid,
+input[type=url]:invalid,
+input[type=email]:invalid,
+input[type=password]:invalid{
+    background:  lightcoral;
+}
+
+

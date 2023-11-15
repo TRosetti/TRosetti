@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+header, main, footer{
+    padding: 20px;
+}
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+header > div{
+    width: 40px;
+    height: 20px;
+}
+
+.d1{
+    margin: 5px 0;
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.d2{
+    width: 70%;
+    height: 30%;
+    background-color: black;
+    border-radius: 5px;
+}
+
+header img{
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+
+
+.listas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+div.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.icone{
+    font-size: 50px;
+}
+
+.list-txt p, h2{
+    margin: 0;
+    padding: 0;
+}
+
+footer  button{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(95, 130, 255);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.272);
+}
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    width: 72px;
+    height: 72px;
+    right: 37px;
+    bottom: 37px;
+}
+
+button svg{
+    width: 25px;
+    height: 25px;
+    
+}

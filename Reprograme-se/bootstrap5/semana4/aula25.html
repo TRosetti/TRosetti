@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS do Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--  Js do Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- CDN Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Botões e Agrupamentos de Botões</title>
+</head>
+<body>
+    <div class="container py-5">
+        <button class="btn btn-outline-primary mb-3">Botão</button>
+        <!-- 
+            btn-lg aumenta o tamhno do botao, btn-sm diminui 
+        
+            btn-outline-primary deixa o botão apenas com uma linha envolta da cor primary 
+        -->
+        <button class="btn btn-success mb-3" data-bs-toggle="button"> Botão Marcável</button>
+
+
+        <div class="btn-group mb-3">
+            <button class="btn btn-primary">Botão 1</button>
+            <button class="btn btn-danger">Botão 2</button>
+            <button class="btn btn-warning">Botão 3</button>
+        </div>
+        <br> <!-- <br> quebra de linha-->
+
+        <div class="btn-group mb-3">
+            <input type="checkbox"  id="btn1" class="btn-check">
+            <label for="btn1" class="btn btn-outline-primary" btn1="">Botão de Checagem 1</label>
+
+            <input type="checkbox"  id="btn2" class="btn-check">
+            <label for="btn2" class="btn btn-outline-primary" btn2="">Botão de Checagem 2</label>
+
+            <input type="checkbox"  id="btn3" class="btn-check">
+            <label for="btn3" class="btn btn-outline-primary" btn3="">Botão de Checagem 3</label>
+        </div>
+        <br>
+        
+        <div class="btn-group mb-3">
+            <input type="radio"  name="grupo" id="btn4" class="btn-check">
+            <label for="btn4" class="btn btn-outline-danger" btn1="">Botão de Checagem 1</label>
+
+            <input type="radio" name="grupo" id="btn5" class="btn-check">
+            <label for="btn5" class="btn btn-outline-danger" btn2="">Botão de Checagem 2</label>
+
+            <input type="radio" name="grupo" id="btn6" class="btn-check">
+            <label for="btn6" class="btn btn-outline-danger" btn3="">Botão de Checagem 3</label>
+        </div>
+
+        <div class="btn-toolbar">
+            <div class="btn-group me-2">
+                <button class="btn btn-primary">
+                    <i class="bi-folder2-open"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-save"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-paperclip"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-imgae"></i>
+                </button>
+            </div>
+
+            <div class="btn-group me-2">
+                <button class="btn btn-primary">
+                    <i class="bi-type-italic"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-type-bold"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-type-underline"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-type-strikethrough"></i>
+                </button>
+            </div>
+
+            <div class="btn-group me-2">
+                <button class="btn btn-primary">
+                    <i class="bi-question"></i>
+                </button>
+                <button class="btn btn-primary">
+                    <i class="bi-door-closed"></i>
+                </button>
+            </div>
+
+            <div class="input-group">
+                <input type="search" class="form-control">
+                <button class="btn btn-primary">
+                    <i class="bi-search"></i>
+                </button>
+            </div>
+        </div>
+        <br>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Submenus</button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="dropdown-item">Submenu 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Submenu 2</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Submenu 3</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+
+    <!-- (Shift + Comand + L) Seleciona todos os itens iguais o que vc selecionar-->
+</body>
+</html>

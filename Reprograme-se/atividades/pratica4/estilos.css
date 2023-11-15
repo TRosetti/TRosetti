@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/*
+Este arquivo CSS contém 15 propriedades CSS a serem configuradas para que os elementos da página de portfólio do desenvolvedor sejam posicionados corretamente. Cada propriedade configurada vale 1 ponto, perfazendo um total de 15 pontos. Leia os enunciados dos seletores atentamente e complete os seletores com as propriedades solicitadas.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4056a1;
+    --secondary: #efe2ba;
+    --success: #d79922;
+    --danger: #f13c20;
+    --light: #c5cbe3;
+    --dark: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+/*
+1. O seletor ".conteiner" a seguir configura o espaço da área de visualização do navegador que será efetivamente ocupado pela página. Ele define algumas coisas importantes. Primeiramente, a página deve ocupar 80% da largura da área de visualização do navegador. Em segundo lugar, a página deve estar horizontalmente centralizada na área de visualização do navegador. Em terceiro lugar, a página deve ter uma altura mínima correspondente à altura total da área de visualização do navegador. Por fim, o posicionamento deste contêiner deve ser relativo, uma vez que outros elementos dependem disso para se posicionarem corretamente de forma fixa, absoluta ou, também, relativa. Complete o seletor a seguir com as propriedades necessárias para se alcançar essa configuração.
+*/
+.conteiner {
+    /* 1a. largura exata de 80% da largura da área de visualização do navegador */
+    width: 80vw;
+
+    /* 1b. margem superior e inferior nulas e margens laterais automáticas para centralizar a página */
+    margin: 0 auto;
+
+    /* 1c. altura mínima de 100% da altura da área de visualização do navegador */
+    min-height: 100vh;
+
+    /* 1d. posicionamento relativo */
+    position: relative;
+}
+
+
+/*
+2. O seletor ".areaesquerda" a seguir configura a barra de navegação lateral esquerda, que também mostra a foto de rosto do desenvolvedor. O seletor define uma largura fixa de 18% da largura da área de visualização do navegador. Define também o posicionamento como fixo, colado na parte superior da área de visualização do navegador, de forma que essa barra de navegação não role junto com o conteúdo da página. Ainda, o seletor define que a altura da barra de navegação deve ser sempre igual a 100% da altura da área de visualização do navegador. Por fim, temos uma margem interna de 15px em todos os lados da barra de navegação. Complete o seletor a seguir com as propriedades necessárias para alcançar essa configuração.
+*/
+.areaesquerda {
+    background-color: white;
+    /* 2a. largura exata de 18% da largura da área de visualização do navegador */
+    width: 18vw;
+    /* 2b. poscionamento fixo */
+    position: fixed;
+    /* 2c. distância de 0px para a borda superior da área de visualização do navegador */
+    margin-top: 0;
+    /* 2d. algura de 100% da altura da área de visualização do navegador */
+    height: 100vh;
+    /* 2e. margens internas de 15px em todos os lados */
+    padding: 15px;
+}
+
+.areaesquerda .logo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.areaesquerda p img {
+    width: 20px;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.areaesquerda p a {
+    font-size: 20px;
+}
+
+.social img {
+    width: 20px;
+    display: inline-block;
+    margin-right: .01vw !important;
+}
+
+/*
+3. O seletor ".areadireita" a seguir configura a área de conteúdo à direita, que mostra todas as seções do site. Ele define uma largura fixa de 62% da largura da área de visualização do navegador. Define também o posicionamento como relativo, de forma que a região seja renderizada a uma distância constante de onde ela seria renderizada caso fosse estática. Essa distância é de 18% da largura da área de visualização para a lateral esquerda. Ainda, o seletor define que temos uma margem interna de 15px em todos os lados dessa região. Complete o seletor a seguir com as propriedades necessárias para alcançar essa configuração.
+*/
+.areadireita {
+    background-color: #eee;
+    /* 3a. largura fixa de 62% da largura da área de visualização do navegador */
+    width: 62vw;
+    /* 3b. poscionamento relativo */
+    position: relative;
+    /* 3c. distância de 18% da largura da área de visualização do navegador para a lateral esquerda */
+    margin-left: 18vw;
+    /* 3d. margem interna de 15px em todos os lados */
+    padding: 15px;
+}
+
+.areadireita h1 b {
+    font-size: 3rem;
+    color: var(--dark);
+}
+
+.areadireita hr {
+    border: 0;
+    height: 8px;
+    background-color: #ddd;
+    margin: 15px 0;
+    clear: both;
+}
+
+.card {
+    width: calc((100% - 1.6rem)/3);
+    background-color: white;
+    display: inline-block;
+}
+
+.card img {
+    width: 100%;
+    border-bottom: solid 1px #ddd;
+}
+
+.sobre .hero {
+    position: relative;
+    background-color: white;
+}
+
+.sobre .hero .texto {
+    width: 35%;
+    float: left;
+    vertical-align: top;
+    padding: 30px;
+}
+
+.sobre .hero .texto h2 {
+    font-size: 2vw;
+}
+
+/*
+4. O seletor a seguir define a configuração da imagem que é mostrada dentro da seção #sobre_mim. É a imagem em que o desenvolvedor aparece sentado com um notebook aberto à sua frente. Essa imagem deve ser posicionada através de uma flutuação à direita e deve ter largura de 65% do tamanho do elemento pai. Complete o seletor a seguir com as propriedades necessárias para alcançar essa configuração.
+*/
+.sobre .hero .imagem {
+    /* 4a. flutuação à direita */
+    float: right;
+    /* 4b. largura fixa de 65% do elemento pai */
+    width: 65%;
+}
+
+.sobre .hero .imagem img {
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--dark);
+    color: white;
+    padding: 15px 30px;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 1.3vw;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--dark);
+    outline: solid 1px var(--dark);
+    outline-offset: -1;
+}
+
+.progresso {
+    height: 3vw;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.progresso div {
+    background-color: var(--dark);
+    height: 3vw;
+    display: inline-block;
+    color: white;
+    line-height: 3vw;
+    text-align: center;
+}
+
+.precos table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: solid 1px #ddd;
+}
+
+.precos table td {
+    padding: 15px;
+    width: 33.33%;
+    border: solid 1px #ddd;
+}
+
+.contato {
+    background-color: #888;
+    padding: 15px;
+    color: white;
+}
+
+.contato a {
+    color: white;
+}
+
+.contato table {
+    width: 100%;
+    text-align: center;
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+}
+
+.contato table td {
+    width: 33.33%;
+    padding: 15px;
+    border: solid 1px #ccc;
+}
+
+.contato table img {
+    width: 64px;
+}
+
+.contato label {
+    font-size: 1.3vw;
+}
+
+.contato input,
+.contato select,
+.contato textarea {
+    padding: 15px;
+    font-size: 1.3vw;
+    font-family: 'Montserrat';
+    width: 100%;
+}
+
+.rodape {
+    text-align: center;
+    color: white;
+    font-size: 1.3vw;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Login</title>
+</head>
+<body>
+   
+    <div class="content">
+        <main>
+            <h1>Login</h1>
+            <form action="/add" method="post" id="form">
+                <div id="nome" class="cadastro">
+                    <label for="txtNome">Nome</label><br>
+                    <input type="text" name="Nome" id="txtNome" required>
+                </div>
+                <div>
+                    <label for="txtEmail">E-mail</label><br>
+                    <input type="email" name="Email" id="txtEmail" >
+                </div>
+                <div>
+                   <label for="pswSennha">Senha</label><br>
+                   <input type="password" name="Senha" id="pswSennha" >
+                </div>
+                <div id="confirmacao" class="cadastro">
+                    <label for="pswConfirmacao">Confirmar Senha</label><br>
+                    <input type="password" name="Confirmacao" id="pswConfirmacao" >
+                </div>
+               <input type="submit" value="Entrar">
+            </form>
+            <span id="situacao"></span>
+            <p id="conta">Não tem uma conta? <span id="cadastrar" onclick="cadastro()">Cadastrar</span></p>
+        
+        </main>
+        <aside>
+            <img src="../../components/code.png" alt="Imagem">
+        </aside>
+    </div>
+       
+    <script src="../../js/form.js"></script>
+</body>
+</html>

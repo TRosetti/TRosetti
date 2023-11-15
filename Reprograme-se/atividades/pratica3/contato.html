@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Meu Portfolio :: Contato</title>
+</head>
+
+<body>
+    <table class="header">
+        <tr>
+            <td rowspan="2" class="logo">
+                <img src="img/face.jpg" alt="Rosto de Fulano de Tal">
+            </td>
+            <td>
+                <b>Fulano de Tal</b><br>
+            </td>
+        </tr>
+        <tr>
+            <td><small>&lt;Designer e Desenvolvedor Web&gt;</small></td>
+        </tr>
+    </table>
+
+    <table class="tabela">
+        <tr class="menu">
+            <td colspan="4">
+                <a href="index.html">Principal</a>
+                <a href="quemsou.html">Quem Sou</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contato.html" class="active">Contato</a>
+            </td>
+        </tr>
+    </table>
+
+    <table class="tabela paginas">
+        <tr>
+            <td>
+                <h1>Entre em contato!</h1>
+                <span>Preencha todos os campos do formulário a seguir e em até 48h lhe responderei. Será um prazer lhe
+                    atender!</span>
+            </td>
+        </tr>
+    </table>
+
+    <table class="tabela formcontato">
+        <tr>
+            <td>
+                <form action="/contato/processar" method="post">
+                    <p>
+                        <label>
+                            Assunto <br>
+                            <select>
+                                <option selected>Selecione o assunto</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Nome <br>
+                            <input type="text" placeholder="Beltrano de Tal">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            E-mail <br>
+                            <input type="text" placeholder="beltrano@email.com">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Telefone <br>
+                            <input type="text" placeholder="(27) 99999-9999">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            Mensagem <br>
+                            <textarea rows="5"></textarea>
+                        </label>
+                    </p>
+                    <p>
+                        <button type="submit">Enviar</button>
+                    </p>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <h3>Outras formas de contato:</h3>
+                <ul type="none">
+                    <li>Residente em Vitória/ES</li>
+                    <li><a href="mailto:contato@email.com">contato@email.com</a></li>
+                    <li>(27) 99999-9999</li>
+                    <li><a href="https://www.linkedin/in/fulano">LinkedIn</a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <p class="footer">
+        <b>Copyright &copy; 2023</b> <br>
+        <img src="img/ifes.png" alt="Logo do Ifes">
+    </p>
+</body>
+
+</html>

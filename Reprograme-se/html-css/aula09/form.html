@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <form action="" method="get">
+        <p>
+            <label for="txtNomeCompleto">Nome Completo</label><br>
+            <input type="text" name="NomeCompleto" id="txtNomeCompleto" placeholder="Thiago Rosetti Miranda">
+        </p>
+        <p>
+            <label for="txtEmail">E-mail</label><br>
+            <input type="email" name="Email" id="txtEmail" placeholder="exemplo@mail.com">
+        </p>
+        <fieldset>
+            <legend>Profissão</legend>
+            <input type="radio" name="Cargo" id="rdProgramador">
+            <label for="rdProgramador" value="P" >Programador</label>
+            <br>
+            <input type="radio" name="Cargo" id="rdWebDesign">
+            <label for="rdWebDesign" value="W" >Web Designer</label>
+            <br>
+            <input type="radio" name="Cargo" id="rdEstudante">
+            <label for="rdEstudante" value="E" >Estudante</label>
+            <br>
+        </fieldset>
+        <p>
+            <input type="checkbox" name="Aceito" id="chkAceito">
+            <label for="chkAceito">Aceito os termos de uso.</label>
+        </p>
+        <p>
+            <label for="slctEstado">Estado</label>
+            <br>
+            <select name="Estado" id="slctEstado"> 
+                <optgroup label="Norte">
+                    <option value="AM">Amazonas</option>
+                    <option value="RO">Rondônia</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+               </optgroup>
+               <optgroup label="Sudeste">
+                    <option value="ES">Espirito Santo</option>
+                    <option value="SP">São Paulo</option>
+               </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="txtCidade">Cidade</label>
+            <br>
+            <input type="text" name="Cidade" id="txtCidade" list="cidade">
+            <datalist id="cidade">
+                <option value="Manaus">
+                <option value="Porto Velho">
+                <option value="Salvador">
+                <option value="Fortaleza">   
+                <option value="Vitória">
+                <option value="São Paulo">      
+            </datalist>
+        </p>
+        <p>
+            <label for="txtCurriculo">Curriculo</label>
+            <br>
+            <textarea name="Curriculo" id="txtCurriculo" cols="30" rows="10" placeholder="Escreva seu curriculo aqui!"></textarea>
+        </p>
+        <p>
+            <input type="reset" value="limpar">
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>

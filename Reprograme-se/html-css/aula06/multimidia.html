@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Multimídia</title>
+</head>
+<body>
+    <h1>Conteúdo Multimídia</h1>
+    <hr>
+    <video controls width="800" height="600" autoplay muted>
+        <!-- Alguns navegadores não começam o video quando entramos na pagina mesmo quando colocamos autoplay, para funcionar o autoplay precisamos adicionar o muted, para o video iniciar no mudo  -->
+        <source src="./arquivos/PopeyeforPresident.mp4" type="video/mp4">
+        <source src="./arquivos/PopeyeforPresident.webm" type="video/webm">
+        <source src="./arquivos/PopeyeforPresident.ogv" type="video/ogv">
+        <track kind="captions" srclang="en-us" src="./arquivos/PopeyeforPresident.en-us.vtt" label="Closed captions">
+        <track kind="subtitles" srclang="pt-br" src="./arquivos/PopeyeforPresident.pt-br.vtt" label="Legenda pt-b" default>
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+</body>
+</html>

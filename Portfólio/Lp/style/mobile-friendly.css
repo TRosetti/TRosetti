@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+
+@media screen and (max-width: 992px) {
+
+    div.light1{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #58518a92;
+        filter: blur(30px);
+        top: -10%;
+        left: -10%;
+    }
+    div.light2{
+        width: 300px;
+        height: 200px;
+    }
+    div.light3{
+        width: 300px;
+        height: 300px;
+    }
+
+    nav .itens{
+        display: none;
+    }
+    .h2-main{
+        padding-top: 50px;
+    }
+    .h2-main h2{
+        font-size: 60px;
+    }
+    aside img{
+        max-width: 300px;
+    }
+    div.mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: end;
+        cursor: pointer;
+    }
+    div.um{
+        width: 50px;
+        height: 6px;
+        background-color: white;
+    }
+    div.dois{
+        width: 30px;
+        height: 6px;
+        background-color: white;
+        
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    .buttons button{
+       font-size: 15px; 
+       padding: 20px 50px;
+       margin: 20px 5px;
+    }
+    div.brands{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div.brands img{
+        padding: 10px 0;
+ 
+    }
+    div.brands img.brand1{
+        padding: 20px;
+    }
+
+    main article{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    main article .h2-main h2{
+        font-size: 50px;
+        display: inline-block;
+        margin: 0 10px;
+    }
+    main article.second{
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    article.testimonials aside{
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    article.final h2{
+        text-align: center;
+    }
+
+    footer h1{
+        padding: 15px;
+    }
+    footer .box{
+        max-width: 350px;
+        display: grid;
+        grid-template-columns: repeat(3, 110px);
+        column-gap:  10px;
+    }   
+    footer .box-content{
+        max-width: fit-content;
+        padding: 10px;
+    }
+    
+}

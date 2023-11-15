@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seletores Avançados</title>
+</head>
+<body>
+    <h1>Seletores Avançados</h1>
+
+    <!-- p#p$*3  -> p(paragrafo) #(id) p$(nome que vai estar dentro do id) *3(multiplicadp por 3 ) 
+                 -> vai criar 3 paragrafos com id p(1,2, 3)   -->
+
+    <!-- <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p> -->
+
+
+    <!-- ul>li{Item $}*3    ,  faz o que está abaixo-->
+ 
+    <!-- <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul> -->
+
+    <!-- div>a*2-->
+
+    <!-- <div>
+        <a href=""></a>
+        <a href=""></a>
+    </div> -->
+
+    <!-- form>(div>(label+input))*7-->
+
+        <form action="">
+            <div>
+                <label for="">Nome</label>
+                <input type="text" size="30" required>
+            </div>
+            <div>
+                <label for="">Instituição</label>
+                <input type="text" size="30" disabled>
+            </div>
+            <div>
+                <label for="">Site</label>
+                <input type="url" size="30" >
+            </div>
+            <div>
+                <label for="">E-mail</label>
+                <input type="email" size="30" required>
+            </div>
+            <div>
+                <label for="">Senha</label>
+                <input type="password" size="30" required>
+            </div>
+            <div>
+                <label for="">Período</label>
+                <input type="number" min="1" max="10" size="5">
+            </div>
+            <div>
+                <input type="checkbox">
+                <label for="">Enviar notificações</label>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Perfil</legend>
+                    <input type="radio" name="perfil" id="">
+                    <label for="">Aluno(a)</label>
+                    <input type="radio" name="perfil" id="">
+                    <label for="">Professor(a)</label>
+                </fieldset>
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        
+</body>
+</html>
