@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para a barra de rolagem horizontal */
+        .scrolling-wrapper {
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100vw; /* Use 100vw para garantir a largura total da janela de visualização */
+        }
+
+        /* Estilo para os botões de navegação */
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #3498db; /* Cor padrão para os botões */
+        }
+
+        /* Estilo para o botão ativo */
+        .nav-button.active {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="scrolling-wrapper">
+    <!-- Botões de navegação -->
+    <a href="#" class="nav-button active" onclick="changeColor(this)">Botão 1</a>
+    <a href="#" class="nav-button" onclick="changeColor(this)">Botão 2</a>
+    <a href="#" class="nav-button" onclick="changeColor(this)">Botão 3</a>
+    <!-- Adicione mais botões conforme necessário -->
+</div>
+
+<script>
+    // Variável para armazenar o botão ativo atualmente
+    var activeButton = document.querySelector('.nav-button.active');
+
+    // Função para alterar a cor do botão clicado
+    function changeColor(element) {
+        // Remove a classe 'active' do botão anterior
+        activeButton.classList.remove("active");
+
+        // Adiciona a classe 'active' ao botão clicado
+        element.classList.add("active");
+
+        // Atualiza a variável activeButton
+        activeButton = element;
+    }
+</script>
+
+</body>
+</html>
