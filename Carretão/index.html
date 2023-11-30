@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
 
 
     <title>Document</title>
@@ -23,29 +24,15 @@
             </div>
             <div class="dia-da-semana">
                 <div class="dropdown">
-                    <button class="btn dropdown-toggle" data-bs-toggle="dropdown">Quinta-Feira</button>
-                    <ul class="dropdown-menu py-0 px-0">
-                        <li>
-                            <a href="#" class="dropdown-item">Segunda-Feira</a>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-item">Terça-Feira</a>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-item">Quarta-Feira</a>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-item">Quinta-Feira</a>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-item">Sexta-Feira</a>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-item">Sabado</a>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-item">Domingo</a>
-                        </li>
+                    <button class="btn dropdown-toggle dias" data-bs-toggle="dropdown">Quinta-Feira</button>
+                    <ul class="dropdown-menu px-3">
+                        <li>Segunda-Feira</li>
+                        <li>Terça-Feira</li>
+                        <li>Quarta-Feira</li>
+                        <li>Quinta-Feira</li>
+                        <li>Sexta-Feira</li>
+                        <li>Sabado</li>
+                        <li>Domingo</li>
                     </ul>
                 </div>
             </div>
@@ -57,9 +44,7 @@
 
             <div class="alert alert-warning alert-dismissible fade show">
                 
-                    <h4 class="alert-heading mb-3">
-                        <i class="bi-info-circle"></i> Promoções
-                    </h4>
+                    <h4 class="alert-heading">Promoções</h4>
                     <p class="my-1">Confira nossas promoções no link abaixo ou clicando em Promoções ao lado do cardapio.</p>
         
                     <button class="btn-close" data-bs-dismiss="alert"></button> 
@@ -79,7 +64,7 @@
               
             </div>
 
-            <div class="search">
+            <div class="search" style="display: none;">
                 <button class="btn_search">
                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="16" y="17.7668" width="2.49861" height="10.0358" rx="1.24931" transform="rotate(-45 16 17.7668)" fill="#B8B8B8"/>
@@ -100,128 +85,26 @@
                 <button class="btn-color" onclick="changeColor(this)" value="drinks">Drinks</button>
             </div>
 
-            <div class="card_wrap">
-                <div class="card_ tudo bebidas">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Água</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
-                
-                <div class="card_ tudo bebidas">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body" >
-                        <h5 class="card_title">Coca-Cola</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
+<!-- ---------------------  Card   --------------------- -->
 
-                <div class="card_ tudo carnes">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Picanha</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
 
-                <div class="card_ tudo carnes">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
+            <div id="cardContainer">
+                <div class="card_" style="display: none;">
+                    <div class="card_content">
+                        <h2 class="card_title">Chop</h2>
+                        <p class="card_text">Chop Pilse da Reserva do Gerente</p>
+                        <div class="price">
+                            <p>R$8,00</p>
+                            <p class="price_discount">R$4,00</p>
+                        </div>
                     </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Ancho</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
-
-                <div class="card_ tudo entradas">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Batata Frita</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
-
-                <div class="card_ tudo entradas">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Bolinho de Carne</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
-
-                <div class="card_ tudo bebidas drinks">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Caipirinha</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
-                    </div>
-                </div>
-
-                <div class="card_ tudo bebidas drinks">
-                    <div class="card_img">
-                        <img src="/image/carretao.png" alt="">
-                    </div>
-                
-                    <div class="card_body">
-                        <h5 class="card_title">Mango Loko Drink</h5>
-                        <p class="card_text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, alias?</p>
-                    </div>
-                    <div class="price">
-                        <p>R$ 20,00</p>
-                        <p class="quinta">R$ 10,00</p>
+                    <div class="img">
+                        <img src="/image/carretao.png" alt="" srcset="">
                     </div>
                 </div>
             </div>
 
+<!--  -------------------------------------------------- -->
             <div class="promo">
                 <h1>Essa vai ser a área da Promoção</h1>
                 <p>Em breve aqui estará as promoções, tudo de melhor para todos vocês.</p>
@@ -234,9 +117,11 @@
         </main>
     </div>
     
+    <script src="card.js"></script>
     <script src="main.js"></script>
-
     <!-- Bootstrap local -->
+    <!-- <script src="teste.js"></script> -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
 </body>
 </html>

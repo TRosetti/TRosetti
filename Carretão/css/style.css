@@ -6,12 +6,16 @@
 
 /*  Header */
 
+
 header{
     margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.menu{
+    width: 70px;
 }
 .menu .m1{
     width: 40px;
@@ -33,8 +37,15 @@ header{
     cursor: pointer;
 }
 
+li{
+    list-style: none; 
+    padding: 5px 0;
+}
+
+
 .logo img{
     height: 70px;
+    width: 70px;
 }
                   
 
@@ -50,7 +61,7 @@ header{
 .btn_check:checked + .btn_::after{
     content: ' ';
     width: 100%;
-    height: 6px;
+    height: 4px;
     color: black;
     background-color: #B3A8F5;
     position: absolute;
@@ -114,6 +125,7 @@ header{
 }
 .btn-color{
     border: 1px solid rgba(0, 0, 0, 0.3);
+    color: black !important;
     background-color: inherit;
     border-radius: 10px;
     padding: 5px 15px;
@@ -122,78 +134,9 @@ header{
 
 .btn-color.active{
     background-color: #B3A8F5;
+    border: none;
+    font-weight: bold;
 }
-
-
-.card_wrap{
-    margin: 20px 0;
-}
-
-
-.card_::before{
-    content: " ";
-    width: 100%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: -10px;
-    left: 0;
-}
-
-.card_{
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-    position: relative;
-}
-
-.card_img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-position: center center;
-    border: 1px solid rgba(0, 0, 0, 0.128);
-    width: 25%;
-    height: 90px;
-}
-
-.card_img img{
-    width: 100%;
-    height: 100%;
-}
-
-
-.card_body{
-    width: 55%;
-    
-}
-
-.card_title{
-    padding-top: 10px;
-    padding-left: 10px;
-    font-size: 1em;
-}
-.card_text{
-    padding: 0 10px;
-    font-size: .8em;
-}
-.price{
-    width: 20%;  
-}
-.price p {
-    text-decoration: line-through;
-    margin: 0;
-}
-.quinta{
-    color: green;
-    text-decoration: none !important;
-}
-
-
-
-
 
 
 
