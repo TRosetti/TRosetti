@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: #333;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+nav::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    min-width: 80px;
+    max-width: 300px;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+}
+
+.ativo {
+    background-color: #4CAF50;
+}   
+
+html {
+    scroll-behavior: smooth;
+}
+:target {
+    scroll-margin-top: 55px; /* Ajuste este valor conforme necessário */
+}
