@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zoom Effect</title>
+</head>
+<body>
+    <div class="imageZoom" style="
+        --url: url(./Tare.png);
+        --zoom-x: 0%; --zoom-y: 0%;
+        --display: none;
+    ">
+        <img src="./Tare.png" alt="">
+    </div>
+
+    <div class="imageZoom" style="
+        --url: url(./misso.webp);
+        --zoom-x: 0%; --zoom-y: 0%;
+        --display: none;
+    ">
+        <img src="./misso.webp" alt="">
+    </div>
+
+    <script>
+        let imageZoom = document.querySelectorAll('.imageZoom');
+
+        imageZoom.forEach( image => {
+            image.addEventListener('mousemove', (event) =>{
+                image.style.setProperty('--display', 'block')
+                let poiter = {
+                    x: (event.offsetX * 100) / image.offsetWidth ,
+                    y: (event.offsetY * 100) / image.offsetHeight
+                }
+                image.style.setProperty('--zoom-x', poiter.x + '%')
+                image.style.setProperty('--zoom-y', poiter.y + '%')
+            })
+        })
+       
+        imageZoom.forEach( image => {
+            image.addEventListener('mouseout', () => {
+            image.style.setProperty('--display', 'none')
+        })
+        });
+        
+
+    </script>
+</body>
+</html>
+
